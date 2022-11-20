@@ -19,7 +19,5 @@ ADD https://github.com/pocketbase/pocketbase/releases/download/v${POCKETBASE_VER
 RUN unzip /tmp/pocketbase.zip -d /usr/local/bin
 RUN chmod +x /usr/local/bin/pocketbase
 
-EXPOSE 8090
-
 # Start Pocketbase
-CMD [ "/usr/local/bin/pocketbase", "serve", "--http=0.0.0.0:8090", "--dir=/pb_data", "--publicDir=/pb_public" ]
+CMD [ "/usr/local/bin/pocketbase", "serve", "--http=0.0.0.0:5000", "--dir=/pb_data", "--publicDir=/pb_public" ]
